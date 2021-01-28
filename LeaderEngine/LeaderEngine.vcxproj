@@ -24,6 +24,7 @@
     <ClCompile Include="LeaderEngine\Application.cpp" />
     <ClCompile Include="LeaderEngine\Types\Entity.cpp" />
     <ClCompile Include="LeaderEngine\Types\Shader.cpp" />
+    <ClCompile Include="LeaderEngine\Types\Transform.cpp" />
     <ClCompile Include="LeaderEngine\Types\VertexArray.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
@@ -277,6 +278,7 @@
     <ClInclude Include="include\GL\wglew.h" />
     <ClInclude Include="include\logger.h" />
     <ClInclude Include="LeaderEngine\Application.h" />
+    <ClInclude Include="include\ldefine.h" />
     <ClInclude Include="LeaderEngine\LeaderEngine.h" />
     <ClInclude Include="LeaderEngine\Types\Component.h" />
     <ClInclude Include="LeaderEngine\Types\Entity.h" />

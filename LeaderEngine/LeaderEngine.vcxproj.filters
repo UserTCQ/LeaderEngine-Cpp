@@ -8,6 +8,7 @@
     <ClCompile Include="include\glm\detail\glm.cpp" />
     <ClCompile Include="include\logger.cpp" />
     <ClCompile Include="LeaderEngine\Types\Entity.cpp" />
+    <ClCompile Include="LeaderEngine\Types\Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LeaderEngine\Application.h" />
@@ -266,6 +267,7 @@
     <ClInclude Include="include\GLFW\glfw3native.h" />
     <ClInclude Include="include\logger.h" />
     <ClInclude Include="LeaderEngine\Types\Entity.h" />
+    <ClInclude Include="include\ldefine.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\glm\detail\func_common.inl" />

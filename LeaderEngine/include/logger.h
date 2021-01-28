@@ -6,5 +6,5 @@
 static class Logger
 {
 public:
-	static void log(const char* msg);
+	static void log(std::string msg);
 };

@@ -12,7 +12,7 @@ namespace LeaderEngine {
 
 		int getAttribLocation(const char* attribName);
 	private:
-		unsigned int handle;
+		int handle;
 
 		std::unordered_map<char*, int> uniformLocations;
 	};

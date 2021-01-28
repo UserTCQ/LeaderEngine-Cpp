@@ -48,6 +48,10 @@ void Entity::render() {
 	shader->use();
 	vertArray->use();
 
+	glm::mat4 mvp = transform->getModelMatrix();
+
+	glUniformMatrix4fv(shader->getAttribLocation("mvp"), 1, GL_FALSE, glm::value_ptr(mvp));
+
 	glDrawElements(GL_TRIANGLES, vertArray->indices.size(), GL_UNSIGNED_INT, (void*)0);
 }
 

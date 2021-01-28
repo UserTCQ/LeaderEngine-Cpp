@@ -1,6 +1,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Shader.h"
+#include <logger.h>
+#include <cassert>
 
 using namespace LeaderEngine;
 
@@ -28,14 +30,12 @@ Shader::Shader(const char* vertSource, const char* fragSource) {
 	glGetProgramiv(handle, GL_ACTIVE_UNIFORMS, &numberOfUniforms);
 
 	for (int i = 0; i < numberOfUniforms; i++) {
-		char* name = NULL;
-		glGetActiveUniform(handle, i, 255, NULL, NULL, NULL, name);
+		char name[64];
+		glGetActiveUniform(handle, i, sizeof(name), NULL, NULL, NULL, name);
 
 		int location = glGetUniformLocation(handle, name);
 
 		uniformLocations[name] = location;
-
-		delete[] name;
 	}
 }
 
@@ -52,5 +52,5 @@ void Shader::use() {
 }
 
 int Shader::getAttribLocation(const char* attribName) {
-	return glGetAttribLocation(handle, attribName);
+	return uniformLocations[(char*)attribName];
 }

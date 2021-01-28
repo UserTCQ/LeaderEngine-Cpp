@@ -40,9 +40,9 @@ void Application::start(int width, int height, const char* title, void (*loadCal
 	if (glewInit() != GLEW_OK) 
 		exit(EXIT_FAILURE);
 
-	Logger::log(std::string("Vendor: ").append((const char*)glGetString(GL_VENDOR)).c_str());
-	Logger::log(std::string("Renderer: ").append((const char*)glGetString(GL_RENDERER)).c_str());
-	Logger::log(std::string("Version: ").append((const char*)glGetString(GL_VERSION)).c_str());
+	Logger::log(std::string("Vendor: ") + (const char*)glGetString(GL_VENDOR));
+	Logger::log(std::string("Renderer: ") + (const char*)glGetString(GL_RENDERER));
+	Logger::log(std::string("Version: ") + (const char*)glGetString(GL_VERSION));
 
 	load();
 
