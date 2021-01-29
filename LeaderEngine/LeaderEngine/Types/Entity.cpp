@@ -50,7 +50,7 @@ void Entity::render() {
 
 	glm::mat4 mvp = transform->getModelMatrix();
 
-	glUniformMatrix4fv(shader->getAttribLocation("mvp"), 1, GL_FALSE, glm::value_ptr(mvp));
+	shader->setMat4("mvp", mvp);
 
 	glDrawElements(GL_TRIANGLES, vertArray->indices.size(), GL_UNSIGNED_INT, (void*)0);
 }

@@ -1,14 +1,14 @@
 #pragma once
 
-#include <vector>
+#include <span>
 
 namespace LeaderEngine {
 	class VertexArray {
 	public:
-		std::vector<float> vertices;
-		std::vector<unsigned int> indices;
+		std::span<float> vertices;
+		std::span<unsigned int> indices;
 
-		VertexArray(std::vector<float> vertices, std::vector<unsigned int> indices);
+		VertexArray(std::span<float> vertices, std::span<unsigned int> indices);
 		~VertexArray();
 
 		void use();

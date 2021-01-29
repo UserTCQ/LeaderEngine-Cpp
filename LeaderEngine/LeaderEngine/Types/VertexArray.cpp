@@ -4,7 +4,7 @@
 
 using namespace LeaderEngine;
 
-VertexArray::VertexArray(std::vector<float> vertices, std::vector<unsigned int> indices) {
+VertexArray::VertexArray(std::span<float> vertices, std::span<unsigned int> indices) {
 	this->vertices = vertices;
 	this->indices = indices;
 	init();
@@ -14,12 +14,6 @@ VertexArray::~VertexArray() {
 	glDeleteBuffers(1, &vbo);
 	glDeleteBuffers(1, &ebo);
 	glDeleteVertexArrays(1, &vao);
-
-	vertices.clear();
-	vertices.shrink_to_fit();
-
-	indices.clear();
-	indices.shrink_to_fit();
 }
 
 void VertexArray::init() {

@@ -4,13 +4,13 @@
 
 using namespace LeaderEngine;
 
-std::vector<float> vertices {
+float vertices[] {
     -0.5f, -0.5f, 0.0f,
      0.5f, -0.5f, 0.0f,
      0.0f,  0.5f, 0.0f
 };
 
-std::vector<unsigned int> indices {
+unsigned int indices[] {
     0, 1, 2
 };
 
